@@ -1,0 +1,17 @@
+name: Docker Image CI
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v3
+     - run: |
+         echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+         echo "login to the docker registry"
+
+     - run: echo "One last message"

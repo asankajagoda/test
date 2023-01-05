@@ -1,0 +1,16 @@
+version: '3.4'
+services:
+ app:
+  image: test-app-app-prod:hot
+  build:
+   context: .
+   dockerfile: ./prod.dockerfile
+   cache_from:
+    - test-app-app-prod:hot
+ static:
+  image: test-app-static-prod:hot
+  build:
+   context: .
+   dockerfile: ./static.dockerfile
+   cache_from:
+    - test-app-static-prod:hot
