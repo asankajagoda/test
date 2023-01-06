@@ -14,4 +14,19 @@ jobs:
          echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
          echo "login to the docker registry"
 
+        docker pull ghcr.io/asankajagoda/test/app:$GITHUB_REF_NAME && echo "$GITHUB_REF_NAME already exists!" && exit 1 || echo "Building $GITHUB_REF_NAME..."
+
+         docker pull ghcr.io/asankajagoda/test/app:hot && docker tag ghcr.io/asankajagoda/test/app:hot app-name-app-prod:hot || true
+         docker pull ghcr.io/asankajagoda/test/static:hot && docker tag ghcr.io/asankajagoda/test/static:hot app-name-static-prod:hot || true
+
+         docker-compose -f docker-compose.prod.yaml build
+
+         docker tag app-name-app-prod:hot ghcr.io/asankajagoda/test/app:$GITHUB_REF_NAME
+         docker tag app-name-static-prod:hot ghcr.io/asankajagoda/test/static:$GITHUB_REF_NAME
+
+         docker push ghcr.io/asankajagoda/test/app:$GITHUB_REF_NAME
+         docker push ghcr.io/asankajagoda/test/static:$GITHUB_REF_NAME
+
+         echo "$GITHUB_REF_NAME built and pushed."
+
      - run: echo "One last message"
