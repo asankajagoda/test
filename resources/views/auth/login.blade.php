@@ -1,25 +1,17 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-<section class="h-screen">
+@include('includes.header')
+<section class="h-screen bg-blue-100">
   <div class="container mx-auto px-4 py-12 h-full">
     <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
-      <div class="md:w-8/12 lg:w-6/12 hidden lg:block mb-12 md:mb-0">
+      <!-- <div class="md:w-8/12 lg:w-6/12 hidden lg:block mb-12 md:mb-0">
         <img
           src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-          class="w-full"
+          class="w-auto"
           alt="Phone image"
         />
-      </div>
+      </div> -->
       <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
-        <h2 class="font-sans text-2xl font-bold text-pink-800 mb-8">Ceylon Electricity Board - User Login</h2>
+        <h2 class="font-sans text-2xl text-center font-bold text-pink-800 mb-8">Ceylon Electricity Board - User Login</h2>
         <form>
-          <!-- User input -->
           <div class="mb-6">
             <input
               type="text"
@@ -28,7 +20,6 @@
             />
           </div>
 
-          <!-- Password input -->
           <div class="mb-6">
             <input
               type="password"
@@ -79,7 +70,7 @@
             data-mdb-ripple="true"
             data-mdb-ripple-color="light"
           >
-            <!-- Facebook -->
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
@@ -98,7 +89,7 @@
             data-mdb-ripple="true"
             data-mdb-ripple-color="light"
           >
-            <!-- Twitter -->
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -114,5 +105,4 @@
     </div>
   </div>
 </section>
-</body>
-</html>
+@include('includes.footer')

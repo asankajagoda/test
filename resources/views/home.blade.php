@@ -1,83 +1,30 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  <div class="flex font-sans">
-  <div class="flex-none w-48 relative">
-    <img src="/classic-utility-jacket.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+@include('includes.header')
+<div class="h-screen bg-blue-100">
+  <div class="container mx-auto py-12 h-full">
+
+    <div class="flex justify-center items-center flex-wrap h-full border-solid border-1 border-light-blue-500 text-gray-800 ">
+      <div>
+      <h1 class="font-sans text-2xl text-center font-bold text-pink-800 mb-8">CEB / Meter Readind Info</h1>
+        <form>
+          <div class="mb-6">
+            <input
+              type="text"
+              class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              placeholder="Account Number"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light"
+          >
+            Check Your Bill
+          </button>
+        </form>
+      </div>
+    </div>
   </div>
-  <form class="flex-auto p-6">
-    <div class="flex flex-wrap">
-      <h1 class="flex-auto text-lg font-semibold text-slate-900">
-        Classic Utility Jacket
-      </h1>
-      <div class="text-lg font-semibold text-slate-500">
-        $110.00
-      </div>
-      <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
-        In stock
-      </div>
-    </div>
-    <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
-      <div class="space-x-2 flex text-sm">
-        <label>
-          <input class="sr-only peer" name="size" type="radio" value="xs" checked />
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
-            XS
-          </div>
-        </label>
-        <label>
-          <input class="sr-only peer" name="size" type="radio" value="s" />
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
-            S
-          </div>
-        </label>
-        <label>
-          <input class="sr-only peer" name="size" type="radio" value="m" />
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
-            M
-          </div>
-        </label>
-        <label>
-          <input class="sr-only peer" name="size" type="radio" value="l" />
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
-            L
-          </div>
-        </label>
-        <label>
-          <input class="sr-only peer" name="size" type="radio" value="xl" />
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
-            XL
-          </div>
-        </label>
-      </div>
-    </div>
-    <div class="flex space-x-4 mb-6 text-sm font-medium">
-      <div class="flex-auto flex space-x-4">
-        <button class="h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit">
-          Buy now
-        </button>
-        <button class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900" type="button">
-          Add to bag
-        </button>
-      </div>
-      <button class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
-        <svg width="20" height="20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
-        </svg>
-      </button>
-    </div>
-    <p class="text-sm text-slate-700">
-      Free shipping on all continental US orders.
-    </p>
-  </form>
 </div>
-</body>
-</html>
+@include('includes.footer')

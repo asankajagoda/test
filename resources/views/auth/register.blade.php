@@ -1,12 +1,5 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-<section class="h-screen">
+@include('includes.header')
+<section class="h-screen bg-blue-100">
   <div class="container mx-auto px-4 py-12 h-full">
     <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
       <div class="md:w-8/12 lg:w-6/12 hidden lg:block mb-12 md:mb-0">
@@ -17,7 +10,7 @@
         />
       </div>
       <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
-        <h2 class="font-sans text-2xl font-bold text-pink-800 mb-8">Ceylon Electricity Board - User Registration</h2>
+        <h2 class="font-sans text-2xl font-bold text-blue-900 mb-8">Ceylon Electricity Board - User Registration</h2>
         <form>
           <div class="flex flex-wrap g-2 mb-6">
             <div class="w-1/2">
@@ -36,7 +29,7 @@
             </div>
           </div>
 
-          <!-- User input -->
+
           <div class="mb-6">
             <input
               type="text"
@@ -45,7 +38,7 @@
             />
           </div>
 
-          <!-- Password input -->
+
           <div class="mb-6">
             <input
               type="text"
@@ -54,7 +47,6 @@
             />
           </div>
 
-          <!-- Submit button -->
           <button
             type="submit"
             class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
@@ -77,7 +69,7 @@
             data-mdb-ripple="true"
             data-mdb-ripple-color="light"
           >
-            <!-- Facebook -->
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
@@ -96,7 +88,7 @@
             data-mdb-ripple="true"
             data-mdb-ripple-color="light"
           >
-            <!-- Twitter -->
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -112,5 +104,4 @@
     </div>
   </div>
 </section>
-</body>
-</html>
+@include('includes.footer')
