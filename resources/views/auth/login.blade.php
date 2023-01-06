@@ -11,10 +11,11 @@
       </div> -->
       <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
         <h2 class="font-sans text-2xl text-center font-bold text-pink-800 mb-8">Ceylon Electricity Board - User Login</h2>
-        <form>
+        <form id="form">
           <div class="mb-6">
             <input
               type="text"
+              id="name"
               class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               placeholder="User name"
             />
@@ -23,6 +24,7 @@
           <div class="mb-6">
             <input
               type="password"
+              id="email"
               class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               placeholder="Password"
             />
